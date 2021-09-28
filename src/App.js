@@ -1,24 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-
+import ClockFunction from './components/ClockFunction';
+import ClockClass from './components/ClockClass';
+import ClockUsingState from './components/ClockUsingState';
+import ClockUsingLifecycleMethods from './components/ClockUsingLifecycleMethods';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+   <ClockFunction date={new Date()} />
+   <ClockClass date={new Date()}/>
+   <ClockUsingState />
+   <ClockUsingLifecycleMethods />
+   </div>
   );
 }
 
